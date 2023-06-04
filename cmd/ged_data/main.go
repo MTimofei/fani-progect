@@ -1,9 +1,19 @@
 package main
 
-import "github.com/fani_progect/incert/get/addr"
+import (
+	"time"
+
+	"github.com/fani_progect/incert/get/addr"
+)
 
 func main() {
 
-	u := addr.New("https://www.youtube.com")
-	u.Start()
+	for {
+		u := addr.New("https://www.youtube.com")
+		u.Start()
+		time.Sleep(2 * time.Second)
+	}
+
 }
+
+//test
